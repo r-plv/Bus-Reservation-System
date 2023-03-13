@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Status page</title>
+    </head>
+    <body>
+        <h1><div style="text-align: center;">Admin Login</div></h1>
+        <div class="msg"><b>{{ msg }}</b></div>
+        <form action="/admin" method="post">
+        <fieldset>
+            <label>Admin name : </label>
+            <input type="text" name="Admin_name" placeholder="Enter admin name" required><br>
+            <label>Password : </label>
+            <input type="password" name="Password" placeholder="Enter password" required><br>
+            <p><button><strong>SIGN IN</strong></button></p>
+        </fieldset>
+        </form>
+    </body>
+</html>

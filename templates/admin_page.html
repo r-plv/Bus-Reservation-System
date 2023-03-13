@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Status page</title>
+    </head>
+    <body>
+        <h1><div style="text-align: center;">All Bookings</div></h1>
+        <p><div style="text-align: left;">
+            <b><a href="/home" style="color :black">Home</a>
+        </b></div></p>
+        <form action="/admin_page" method="post">
+        <fieldset>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Booking_Id</th>
+                    <th>Bus_Id</th>
+                    <th>Name</th>
+                    <th>Arrive</th>
+                    <th>Destinations</th>
+                    <th>Travel_Date</th>
+                    <th>Arrival_Time</th>
+                    <th>Departure_Time</th>
+                    <th>PassengerNo</th>
+                    <th>Total_Fare</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td>{{ i.Booking_Id }}</td>
+                    <td>{{ i.BusId }}</td>   
+                    <td>{{ i.Username }}</td>
+                    <td>{{ i.Arrive }}</td>
+                    <td>{{ i.Destination }}</td>
+                    <td>{{ i.Travel_Date }}</td>
+                    <td>{{ i.Arrival_Time }}</td>
+                    <td>{{ i.Departure_Time }}</td>
+                    <td>{{ i.PassengerNo }}</td>
+                    <td>{{ i.Total_Fare }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p>
+            <label>Enter Booking_Id to Cancel Ticket : </label>
+            <input type="text" name="Booking_Id" placeholder="Enter booking_id" required></br>
+        </p>
+        <p>
+            <input type="submit" value="Cancel ticket">
+        </p>
+        </fieldset>
+        <p>
+            <div class="msg"><b>{{ msg }}</b></div>
+        </p>
+        </form>
+    </body>
+</html>

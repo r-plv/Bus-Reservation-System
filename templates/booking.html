@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booking page</title>
+    </head>
+    <body>
+        <h1><div style="text-align: center;">Bus Ticket Booking</div></h1>
+        <div><p>
+            <a href="/dashboard" style="text-align: right;"><strong>Go back to Dashboard</strong></a>    
+        </p></div>
+        <form action="/booking" method="post">
+            <fieldset>
+                <label>From : </label>
+                <input list="Arrive" name="Arrive" required>
+                <datalist id='Arrive'>
+                    <option value="Pune">Pune
+                    <option value="Mumbai">Mumbai
+                    <option value="Amravati">Amravati
+                    <option value="Shirpur">Shirpur
+                </datalist><br>
+                <label>To : </label>
+                <input list="Destination" name="Destination" required>
+                <datalist id='Destination'>
+                    <option value="Pune">Pune
+                    <option value="Mumbai">Mumbai
+                    <option value="Amravati">Amravati
+                    <option value="Shirpur">Shirpur
+                </datalist><br>
+                <label>Travel_Date : </label>
+                <input type="date" name="Travel_Date"><br>
+                <label>Arrival Time : </label>
+                <input type="radio" name="Arrival_time" value="08:00:00"><label>8 AM</label>
+                <input type="radio" name="Arrival_time" value="20:00:00"><label>8 PM</label></br>
+                <label>No. of Passengers : </label>
+                <input type="number" name="PassengerNo" placeholder="Enter Passenger No" step="any" min="1" required><br>
+                <p><input type="submit" value="Book Ticket"><strong></strong></p>
+            </fieldset>
+        </form>
+        <div class="msg"><b>{{ msg }}</b></div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sign up</title>
+        <link href="{{ url_for }}">
+    </head>
+    <body>
+        <div >
+            <h2>Sign Up</h2>
+            <div class="msg"><b>{{ msg }}</b><br>
+                <p><a href="/home" style="text-align: right;"><strong>Home</strong></a><label> | </label>
+                    <a href="/login" style="text-align: right;"><strong>Sign In</strong></a></p>
+            </div>
+        </div>
+        <fieldset>
+            <form method="post" action="/register">
+                    <label><b>Name : </b></label>
+                    <input type="text" name="Name" placeholder="Enter Full Name" required><br>
+                    <label><b>Username : </b></label>
+                    <input type="text" name="Username" placeholder="Enter Username" required><br>
+                    <lable><b>E-mail : </b></label>
+                    <input type="email" name="E_mail" placeholder="Enter E-mail" required><br>
+                    <label><b>Date of Birth : </b></label>
+                    <input type="date" name="BirthDate" required><br>
+
+                    <!--input type="password"> defines a password field
+                    The characters in a password field are masked (shown as asterisks or circles)-->
+                    <label><b>Password : </b></label>
+                    <input type="password" name="Password" placeholder="Enter Password" required><br>
+                    <!--input type="button" defines a button-->
+
+                    <p><button type="submit"><b>SIGN UP</b></button></p>
+            </form>
+        </fieldset>   
+    </body>
+</html>

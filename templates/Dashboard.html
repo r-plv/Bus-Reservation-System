@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+            background-color: lightyellow;
+        }
+        button{
+            display: block;
+            background-color: blueviolet;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            border-color: black;
+            border: 5px solid;
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Dashboard</title>
+</head>
+<body >
+    <center>
+        <fieldset>
+            <p><div style="text-align: right;">
+                <a href="/logout" style="color :black">Logout</a><label> |</label>
+            </div></p>
+            <div class="msg"><b>{{ msg }}</b></div>
+            <p><form action="/booking1"><button type="submit" class="button">Book Ticket</button></form>
+                <form action="/cancellation1" ><button type="submit" class="button">Cancel Ticket</button></form>
+                <form action="/status"><button type="submit" class="button">Check Booking Status</button></form></p>
+        </fieldset>
+    </center>
+</body>

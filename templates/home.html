@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<style>
+            .main{
+                background-image: "{{ url_for('static',  filename = 'img/bus1.png') }}";
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            h1{ text-align: center;
+                font-weight: bold;
+                font-size: 300%;
+            }
+            .footer{
+                font-family:cursive;
+                font-style: italic;
+                font-size: 400%;
+                color: crimson;
+                font-weight: bold;
+                position: fixed;
+                text-align: center;
+                bottom: 0px;
+                width: 100%;
+            }
+        </style>-->
+        <link href = {{ url_for('static', filename = 'css/base.css') }} rel="stylesheet">
+        <title>Home Page</title>
+    </head>
+    <body class="main">
+        <h1 class="header">Bus Ticket Booking</h1>
+        <form action="/home" method="post">
+            <p><div style="text-align: left;">
+                <b><a href="/home" style="color :black">Home</a><label> | </label>
+                <a href="/login1" target="_blank" style="color :black">User Login</a><label> | </label>
+                <a href="/admin" target="_blank" style="color: black">Admin Login</a><label> | </label>
+                <a href="/register" target="_blank" style="color : black">Register</a></b>
+            </div></p>
+        </form>
+        <p>
+            <div class="footer">We're here to take you there...</div>
+        </p>
+    </body>
+</html>

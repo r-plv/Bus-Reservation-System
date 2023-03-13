@@ -1,0 +1,22 @@
+.main{
+    background-image: url('/static/img/bus1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 300%;
+}
+.footer{
+    font-family:cursive;
+    font-style: italic;
+    font-size: 400%;
+    color: crimson;
+    font-weight: bold;
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+}

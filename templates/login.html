@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <!--<link href="{{ url_for }}">-->
+    </head>
+    <body>
+        <h3>Login</h3>
+        <div class="msg"><b>{{ msg }}</b></div>
+        <form action="/login" method="POST">
+            <fieldset>
+                <label>Username : </label>
+                <input type="text" name="Username" placeholder="Enter username" required><br>
+                <label>Password : </label>
+                <input type="password" name="Password" placeholder="Enter password" required><br>
+                <p><button><strong>SIGN IN</strong></button></p>
+                <label>Don't have account?</label><br>
+                <a href="/register"><strong>SIGN UP</strong></a><br>
+                <a href="/home" style="text-align: right;"><strong>Home</strong></a>
+            </fieldset>
+        </form>
+    </body>
+</html>
