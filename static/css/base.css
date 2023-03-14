@@ -10,6 +10,7 @@ h1{
     font-size: 300%;
 }
 .footer{
+    animation: blinker 1.5s linear infinite;
     font-family:cursive;
     font-style: italic;
     font-size: 400%;
@@ -19,4 +20,9 @@ h1{
     text-align: center;
     bottom: 0px;
     width: 100%;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }
